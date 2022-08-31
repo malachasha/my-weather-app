@@ -29,6 +29,7 @@ p {
   font-weight: 900;
   font-size: 25px;
   text-align: center;
+  margin-top: 30px;
 }
 
 #day {
@@ -74,7 +75,7 @@ p {
 #temperature {
   font-size: 60px;
   font-weight: 800;
-  margin-left: 35%;
+  margin-left: 15%;
 }
 
 #celsius {
@@ -120,7 +121,7 @@ h5 {
   font-weight: bold;
 }
 .days {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
@@ -175,7 +176,7 @@ h5 {
   transition: 200ms ease-in-out;
 }
 .days-con:hover {
-  background: #08385c48;
+  background: #eff0f08e;
 }
 
 h4 {
@@ -198,11 +199,12 @@ p.card-text {
   display: block;
   margin: 20px auto;
   padding: 15px;
-  border: 3px solid black;
+  border: 3px solid rgb(97, 97, 97);
   border-radius: 50%;
   max-width: 130px;
 }
 footer {
+  margin-top: 30px;
   margin-left: 10%;
   font-family: "Josefin Sans", sans-serif;
 }
