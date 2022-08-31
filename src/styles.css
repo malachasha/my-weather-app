@@ -1,5 +1,5 @@
 .h1-main {
-  color: rgb(27, 27, 46);
+  color: rgb(24, 24, 43);
   text-align: center;
   margin: 25px;
   font-family: "Paytone One", sans-serif;
@@ -28,7 +28,7 @@ p {
 #city {
   font-weight: 900;
   font-size: 25px;
-  margin-left: 10%;
+  text-align: center;
 }
 
 #day {
@@ -196,9 +196,9 @@ p.card-text {
 
 .other-img {
   display: block;
-  margin: 10px auto;
+  margin: 20px auto;
   padding: 15px;
-  border: 2px solid black;
+  border: 3px solid black;
   border-radius: 50%;
-  width: 130px;
+  max-width: 130px;
 }
