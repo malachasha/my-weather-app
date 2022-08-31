@@ -202,3 +202,10 @@ p.card-text {
   border-radius: 50%;
   max-width: 130px;
 }
+footer {
+  margin-left: 10%;
+  font-family: "Josefin Sans", sans-serif;
+}
+.github-link {
+  text-decoration: none;
+}
