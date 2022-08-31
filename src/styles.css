@@ -103,7 +103,7 @@ p {
 
 .other-details-key {
   float: left;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   margin-left: 15%;
 }
@@ -112,7 +112,8 @@ p {
   float: left;
   font-size: 16px;
   font-weight: 400;
-  margin-left: 40px;
+  margin-left: 30px;
+  padding-top: 5px;
 }
 
 h5 {
@@ -171,6 +172,7 @@ h5 {
 }
 .other-days {
   margin-bottom: 10px;
+  min-width: 200px;
 }
 .days-con {
   transition: 200ms ease-in-out;
@@ -210,4 +212,35 @@ footer {
 }
 .github-link {
   text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  div.col-8.other-days {
+    width: 100%;
+  }
+  div.col-4.other-days {
+    width: 100%;
+  }
+  #temperature {
+    margin-left: 30%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .find-btn,
+  .current-btn {
+    margin-left: 10%;
+    margin-bottom: 10px;
+    width: 80%;
+  }
+  .type-city {
+    margin-left: 13%;
+  }
+}
+@media only screen and (max-width: 354px) {
+  #temperature {
+    padding-right: 20%;
+  }
+  #celsius {
+    padding-left: 10%;
+  }
 }
