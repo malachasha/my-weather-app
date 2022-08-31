@@ -1,0 +1,204 @@
+.h1-main {
+  color: rgb(24, 24, 43);
+  text-align: center;
+  margin: 25px;
+  font-family: "Paytone One", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(110, 136, 161) 90.2%
+  );
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-left Div CSS */
+
+#city {
+  font-weight: 900;
+  font-size: 25px;
+  margin-left: 10%;
+}
+
+#day {
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+#date {
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 4px;
+  text-align: center;
+}
+
+#time {
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Top-Right Div CSS */
+
+#weather-status {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* Bottom-left CSS */
+
+#temperature,
+#celsius,
+#temp-divider,
+#fahrenheit {
+  display: inline;
+  vertical-align: middle;
+}
+
+#temperature {
+  font-size: 60px;
+  font-weight: 800;
+  margin-left: 35%;
+}
+
+#celsius {
+  margin-right: 10px;
+}
+
+#fahrenheit {
+  margin-right: 5px;
+  color: #b0bec5;
+}
+
+#celsius,
+#temp-divider,
+#fahrenheit {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+#celsius:hover,
+#fahrenheit:hover {
+  cursor: pointer;
+}
+
+/* Bottom-Right CSS */
+
+.other-details-key {
+  float: left;
+  font-size: 16px;
+  font-weight: 300;
+  margin-left: 15%;
+}
+
+.other-details-values {
+  float: left;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 40px;
+}
+
+h5 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+.days {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.main-day {
+  padding: 3px;
+  margin: 0;
+}
+.type-city {
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: 75%;
+  height: 40px;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 10px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.find-btn {
+  text-align: center;
+  width: 11%;
+  padding: 8px 0px 6px;
+  font-family: "Josefin Sans", sans-serif;
+}
+.current-btn {
+  width: 10%;
+  background-color: #a0ecff;
+  margin-left: 1px;
+}
+
+.city-name {
+  padding: 20px;
+  margin-top: 40px;
+  text-align: right;
+  font-size: 30px;
+}
+.city-wind {
+  padding: 20px;
+  margin-top: 30px;
+}
+.weather-icon {
+  width: 100px;
+  margin-top: 15px;
+  margin-left: 60px;
+  float: right;
+}
+.other-days {
+  margin-bottom: 10px;
+}
+.days-con {
+  transition: 200ms ease-in-out;
+}
+.days-con:hover {
+  background: #08385c48;
+}
+
+h4 {
+  font-size: 22px;
+}
+p.city-name {
+  font-size: 19px;
+  margin-top: 26px;
+  text-align: left;
+}
+p.city-name strong {
+  font-size: 23px;
+}
+p.card-text {
+  text-align: center;
+  font-size: 19px;
+}
+
+.other-img {
+  display: block;
+  margin: 10px auto;
+  padding: 15px;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 130px;
+}
