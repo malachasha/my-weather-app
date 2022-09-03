@@ -48,6 +48,8 @@ function ShowTemp(response) {
   let pressure = document.querySelector(".pressure");
   let cityTemp = document.querySelector("#temperature");
   let weatherStatus = document.querySelector("#weather-status");
+  let iconElement = document.querySelector(".current-img");
+
   celsiusTemp = Math.round(response.data.main.temp);
   city.innerHTML = response.data.name;
   windSpeed.innerHTML = response.data.wind.speed + " Km/h";
@@ -55,6 +57,10 @@ function ShowTemp(response) {
   pressure.innerHTML = response.data.main.pressure + " hPa";
   weatherStatus.innerHTML = response.data.weather[0].description.toUpperCase();
   cityTemp.innerHTML = Math.round(response.data.main.temp);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 function displayCity() {
