@@ -17,6 +17,7 @@ var days = [
   "Friday",
   "Saturday",
 ];
+var forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 day.innerHTML = days[dt.getDay()];
 var months = [
   "January",
@@ -41,11 +42,133 @@ time.innerHTML =
   ((dt.getMinutes() < 10 ? "0" : "").toString() + dt.getMinutes().toString()) +
   (dt.getHours() < 12 ? " AM" : " PM").toString();
 
-function displayForecast(response) {}
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col other-days">
+              <div class="card h-100 days-con">
+                <img
+                  src="http://openweathermap.org/img/wn/${
+                    forecast[0].weather[0].icon
+                  }@2x.png"
+                  class="card-img-top other-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong>${Math.round(forecast[0].temp.max)}°C</strong>
+                    <br />
+                    ${Math.round(forecast[0].temp.min)}°C
+                  </p>
+                  <h5 class="card-title">${forecastDays[dt.getDay() + 1]} ${
+      dt.getDate() + 1
+    }</h5>
+                </div>
+              </div>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col other-days">
+              <div class="card h-100 days-con">
+                <img
+                  src="http://openweathermap.org/img/wn/${
+                    forecast[1].weather[0].icon
+                  }@2x.png"
+                  class="card-img-top other-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong>${Math.round(forecast[1].temp.max)}°C</strong>
+                    <br />
+                    ${Math.round(forecast[1].temp.min)}°C
+                  </p>
+                  <h5 class="card-title">${forecastDays[dt.getDay() + 2]} ${
+      dt.getDate() + 2
+    }</h5>
+                </div>
+              </div>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col other-days">
+              <div class="card h-100 days-con">
+                <img
+                  src="http://openweathermap.org/img/wn/${
+                    forecast[2].weather[0].icon
+                  }@2x.png"
+                  class="card-img-top other-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong>  ${Math.round(forecast[2].temp.max)}°C</strong>
+                    <br />
+                      ${Math.round(forecast[2].temp.min)}°C
+                  </p>
+                  <h5 class="card-title">${forecastDays[dt.getDay() + 3]} ${
+      dt.getDate() + 3
+    }</h5>
+                </div>
+              </div>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col other-days">
+              <div class="card h-100 days-con">
+                <img
+                  src="http://openweathermap.org/img/wn/${
+                    forecast[3].weather[0].icon
+                  }@2x.png"
+                  class="card-img-top other-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong>${Math.round(forecast[3].temp.max)}°C</strong>
+                    <br />
+                    ${Math.round(forecast[3].temp.min)}°C
+                  </p>
+                  <h5 class="card-title">${forecastDays[dt.getDay() + 4]} ${
+      dt.getDate() + 4
+    }</h5>
+                </div>
+              </div>
+            </div>`;
+  forecastHTML =
+    forecastHTML +
+    `<div class="col other-days">
+              <div class="card h-100 days-con">
+                <img
+                  src="http://openweathermap.org/img/wn/${
+                    forecast[4].weather[0].icon
+                  }@2x.png"
+                  class="card-img-top other-img"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <p class="card-text">
+                    <strong>${Math.round(forecast[4].temp.max)}°C</strong>
+                    <br />
+                    ${Math.round(forecast[4].temp.min)}°C
+                  </p>
+                  <h5 class="card-title">${forecastDays[dt.getDay() + 5]} ${
+      dt.getDate() + 5
+    }</h5>
+                </div>
+              </div>
+            </div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
+}
 
 function getForecast(coordinates) {
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  let api = "c95d60a1e3adbeb286133f1ebebc2579";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${api}&units=metric`;
+  axios.get(`${apiUrl}`).then(displayForecast);
 }
 
 function ShowTemp(response) {

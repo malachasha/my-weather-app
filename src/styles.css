@@ -197,6 +197,9 @@ p.card-text {
   font-size: 19px;
 }
 
+.card-text strong {
+  font-size: 22px;
+}
 .other-img {
   display: block;
   margin: 20px auto;
@@ -209,6 +212,12 @@ footer {
   margin-top: 30px;
   margin-left: 10%;
   font-family: "Josefin Sans", sans-serif;
+}
+footer a {
+  color: black;
+}
+footer a:hover {
+  color: white;
 }
 .github-link {
   text-decoration: none;
